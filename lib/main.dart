@@ -29,28 +29,34 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Container(
-                height: 200,
-                width: 200,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(100.0),
-                  color: Colors.grey.shade300,
-                  image: const DecorationImage(
-                    image: AssetImage('assets/profile-modified.png'),
-                    fit: BoxFit.cover,
+              SizedBox(height: 40,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    height: 75,
+                    width: 75,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100.0),
+                      color: Colors.grey.shade300,
+                      image: const DecorationImage(
+                        image: AssetImage('assets/profile-modified.png'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-              const SizedBox(height: 20),
-              Text(
-                "art's portfolio",
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                  color: _isDarkMode ? Colors.white : Colors.black87,
-                ),
+                  const SizedBox(height: 20, width: 15,),
+                  Text(
+                    "art's portfolio",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: _isDarkMode ? Colors.white : Colors.black87,
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(height: 20),
               // Theme Toggle
